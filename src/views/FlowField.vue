@@ -25,7 +25,7 @@ const setup = () => {
 			this.speedModifier = Math.floor(Math.random() * 3 + 1);
 
 			this.positions = [{ x: this.x, y: this.y }];
-			this.maxLenght = Math.floor(Math.random() * 1000 + 10);
+			this.maxLenght = Math.floor(Math.random() * 300 + 10);
 			this.angle = 0;
 
 			this.timer = this.maxLenght * 2;
