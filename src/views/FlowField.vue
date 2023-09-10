@@ -13,7 +13,7 @@ const setup = () => {
 	ctx.strokeStyle = "white";
 	ctx.lineCap = "round";
 	ctx.lineJoin = "round";
-	ctx.lineWidth = 1;
+	ctx.lineWidth = 0.5;
 
 	class Particle {
 		constructor(effect) {
@@ -39,7 +39,7 @@ const setup = () => {
 			for (let i = 0; i < this.positions.length; i++) {
 				context.lineTo(this.positions[i].x, this.positions[i].y);
 			}
-			context.shadowBlur = 10;
+			context.shadowBlur = 30;
 			context.shadowColor = "white";
 			context.stroke();
 		}
@@ -79,15 +79,15 @@ const setup = () => {
 			this.width = width;
 			this.height = height;
 			this.particles = [];
-			this.numberOfParticles = 512;
+			this.numberOfParticles = 2048;
 
 			this.cellSize = 16;
 			this.rows;
 			this.cols;
 			this.flowFields = [];
 
-			this.curve = 0.67;
-			this.zoom = 0.05;
+			this.curve = -3.67;
+			this.zoom = 0.025;
 
 			this.init();
 		}
