@@ -2,7 +2,9 @@
 	<main class="page">
 		<router-link v-for="(item, index) in pages" :key="index" :to="item.link">
 			<ParallaxCard class="card card__particles">
-				<h1>{{ item.title }}</h1>
+				<div class="card__content">
+					<h1>{{ item.title }}</h1>
+				</div>
 			</ParallaxCard>
 		</router-link>
 	</main>
@@ -42,7 +44,18 @@ export default {
 	border-radius: 20px;
 
 	&__particles {
-		background-color: pink;
+		color: aliceblue;
+		background-color: black;
+	}
+
+	&__content {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		transform: translateZ(100px);
 	}
 }
 </style>
