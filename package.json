@@ -5,11 +5,12 @@
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check build-only",
-    "preview": "vite preview",
+    "deploy": "gh-pages -d dist",
     "build-only": "vite build",
     "type-check": "vue-tsc --noEmit -p tsconfig.app.json --composite false"
   },
   "dependencies": {
+    "gh-pages": "^6.0.0",
     "pinia": "^2.1.6",
     "vue": "^3.3.4",
     "vue-router": "^4.2.4"
